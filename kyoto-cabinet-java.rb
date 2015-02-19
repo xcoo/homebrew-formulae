@@ -5,6 +5,7 @@ class KyotoCabinetJava < Formula
   url 'http://fallabs.com/kyotocabinet/javapkg/kyotocabinet-java-1.24.tar.gz'
   sha1 '1149b31faf65dd2f2b1761fb0b747ddb55b945f3'
 
+  depends_on "kyoto-cabinet"
   depends_on :java => "1.6+"
 
   patch :DATA

@@ -1,10 +1,9 @@
-require 'formula'
-
 class Libbwa < Formula
-  homepage 'https://github.com/chrovis/libbwa'
-  url 'https://github.com/chrovis/libbwa/archive/0.7.9a.tar.gz'
-  version '0.7.9a'
-  sha1 '6d5e8903fee6552af55738c0cb5d09847ed848a7'
+  desc "Shared library of Burrows-Wheeler Aligner (BWA)"
+  homepage "https://github.com/chrovis/libbwa"
+  url "https://github.com/chrovis/libbwa/archive/0.7.9a.tar.gz"
+  version "0.7.9a"
+  sha256 "b1135f5850526e4f1ac357b33a2a198b5873b3dff8108b893926cc858ced7c42"
 
   depends_on "cmake" => :build
 

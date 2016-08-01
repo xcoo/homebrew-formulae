@@ -1,9 +1,8 @@
-require 'formula'
-
 class KyotoCabinetJava < Formula
-  homepage 'http://fallabs.com/kyotocabinet/'
-  url 'http://fallabs.com/kyotocabinet/javapkg/kyotocabinet-java-1.24.tar.gz'
-  sha1 '1149b31faf65dd2f2b1761fb0b747ddb55b945f3'
+  desc "The Java binding of Kyoto Cabinet"
+  homepage "http://fallabs.com/kyotocabinet/"
+  url "http://fallabs.com/kyotocabinet/javapkg/kyotocabinet-java-1.24.tar.gz"
+  sha256 "9c0ddd561dc34e6b45cb37bef69e0d4536cc42040646247f28635b898e477fb0"
 
   depends_on "kyoto-cabinet"
   depends_on :java => "1.6+"
@@ -15,7 +14,7 @@ class KyotoCabinetJava < Formula
     ENV.append "CPPFLAGS", "-I#{java_home}/include -I#{java_home}/include/darwin"
     system "./configure", "--prefix=#{prefix}"
     system "make"
-    system "make install"
+    system "make", "install"
   end
 end
 

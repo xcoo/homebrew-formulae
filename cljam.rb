@@ -1,8 +1,8 @@
 class Cljam < Formula
   desc "Tools for manipulating DNA Sequence Alignment/Map (SAM)"
   homepage "https://chrovis.github.io/cljam/"
-  url "https://github.com/chrovis/cljam/releases/download/0.5.1/cljam", :using => :nounzip
-  sha256 "48fe10551144f21c6eafbb73c2d161cf5786104e1bb017403942f3531639aeda"
+  url "https://github.com/chrovis/cljam/releases/download/0.6.0/cljam", :using => :nounzip
+  sha256 "cf9e6ec31e0e5ff5a196cbc04ff5554cd24360b411fb10dabee05a3388f6436c"
 
   depends_on :java
 

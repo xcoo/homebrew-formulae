@@ -1,29 +1,24 @@
 class Papery < Formula
   include Language::Python::Virtualenv
 
-  desc "papery is  is a simple, static site generator written in Python - supports Markdown/JSON input and Jinja2 templating."
+  desc "papery is a simple, static site generator written in Python - supports Markdown/JSON input and Jinja2 templating."
   homepage "https://github.com/withletters/papery"
-  url "https://files.pythonhosted.org/packages/ce/f7/d543816821229a14587984f1a6431589b4d52f994effc2427643b0f087fd/papery-0.7.2.tar.gz"
-  sha256 "ca4756efd314535cd69dcfd5d302c2cf502df7609154452007a6903451c66da7"
+  url "https://files.pythonhosted.org/packages/39/9f/df2f3d13eb5afd12b903acce79cf80034865015f0caee9124f40638257ab/papery-0.8.0.tar.gz"
+  sha256 "c11ca5691da83910756b0960cb321a28bb9d468584749d8064fbad926326232e"
   license "Apache-2.0"
 
   depends_on "libyaml"
-  depends_on "markdownlint-cli" => :optional
   depends_on "python@3.12"
+  depends_on "markdownlint-cli" => :optional
 
   resource "docopt" do
     url "https://files.pythonhosted.org/packages/a2/55/8f8cab2afd404cf578136ef2cc5dfb50baa1761b68c9da1fb1e4eed343c9/docopt-0.6.2.tar.gz"
     sha256 "49b3a825280bd66b3aa83585ef59c4a8c82f2c8a522dbe754a8bc8d08c85c491"
   end
 
-  resource "importlib-metadata" do
-    url "https://files.pythonhosted.org/packages/a0/fc/c4e6078d21fc4fa56300a241b87eae76766aa380a23fc450fc85bb7bf547/importlib_metadata-7.1.0.tar.gz"
-    sha256 "b78938b926ee8d5f020fc4772d487045805a55ddbad2ecf21c6d60938dc7fcd2"
-  end
-
   resource "jinja2" do
-    url "https://files.pythonhosted.org/packages/b2/5e/3a21abf3cd467d7876045335e681d276ac32492febe6d98ad89562d1a7e1/Jinja2-3.1.3.tar.gz"
-    sha256 "ac8bd6544d4bb2c9792bf3a159e80bba8fda7f07e81bc3aed565432d5925ba90"
+    url "https://files.pythonhosted.org/packages/ed/55/39036716d19cab0747a5020fc7e907f362fbf48c984b14e62127f7e68e5d/jinja2-3.1.4.tar.gz"
+    sha256 "4a3aee7acbbe7303aede8e9648d13b8bf88a429282aa6122a993f0ac800cb369"
   end
 
   resource "jsonlint" do
@@ -52,8 +47,8 @@ class Papery < Formula
   end
 
   resource "pymdown-extensions" do
-    url "https://files.pythonhosted.org/packages/b0/ec/e3d966cfb286d5a48e7c43a559a297b857ab935209ee9072e5a5492706c9/pymdown_extensions-10.7.1.tar.gz"
-    sha256 "c70e146bdd83c744ffc766b4671999796aba18842b268510a329f7f64700d584"
+    url "https://files.pythonhosted.org/packages/09/11/0a1da270c1011194a6efee7ec1ac07d8b75a9706eed4a80675403f6a9d70/pymdown_extensions-10.8.1.tar.gz"
+    sha256 "3ab1db5c9e21728dabf75192d71471f8e50f216627e9a1fa9535ecb0231b9940"
   end
 
   resource "python-dateutil" do
@@ -86,19 +81,9 @@ class Papery < Formula
     sha256 "1e61c37477a1626458e36f7b1d82aa5c9b094fa4802892072e49de9c60c4c926"
   end
 
-  resource "typing-extensions" do
-    url "https://files.pythonhosted.org/packages/f6/f3/b827b3ab53b4e3d8513914586dcca61c355fa2ce8252dea4da56e67bf8f2/typing_extensions-4.11.0.tar.gz"
-    sha256 "83f085bd5ca59c80295fc2a82ab5dac679cbe02b9f33f7d83af68e241bea51b0"
-  end
-
   resource "yamllint" do
     url "https://files.pythonhosted.org/packages/da/06/d8cee5c3dfd550cc0a466ead8b321138198485d1034130ac1393cc49d63e/yamllint-1.35.1.tar.gz"
     sha256 "7a003809f88324fd2c877734f2d575ee7881dd9043360657cc8049c809eba6cd"
-  end
-
-  resource "zipp" do
-    url "https://files.pythonhosted.org/packages/3e/ef/65da662da6f9991e87f058bc90b91a935ae655a16ae5514660d6460d1298/zipp-3.18.1.tar.gz"
-    sha256 "2884ed22e7d8961de1c9a05142eb69a247f120291bc0206a00a7642f09b5b715"
   end
 
   def install
